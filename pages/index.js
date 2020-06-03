@@ -2,6 +2,18 @@ import Head from "next/head";
 import Prismic from "prismic-javascript";
 import { RichText, Date } from "prismic-reactjs";
 import { client } from "../prismic-configuration";
+import styled from "styled-components";
+
+const Hero = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+`;
+
+const Article = styled.div`
+  background: purple;
+  height: 50px;
+`;
 
 export default function Home(props) {
   return (
@@ -16,6 +28,12 @@ export default function Home(props) {
           <li key={post.uid}>{RichText.render(post.data.title)}</li>
         ))}
       </ul>
+      <Hero>
+        <Article></Article>
+        <Article></Article>
+        <Article></Article>
+        <Article></Article>
+      </Hero>
     </div>
   );
 }
