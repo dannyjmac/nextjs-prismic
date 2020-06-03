@@ -4,7 +4,6 @@ import { RichText, Date } from "prismic-reactjs";
 import { client } from "../prismic-configuration";
 
 export default function Home(props) {
-  console.log(props.posts.results);
   return (
     <div className="container">
       <Head>
